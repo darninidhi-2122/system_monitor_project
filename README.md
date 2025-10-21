@@ -4,25 +4,23 @@ project - Batch 2
 # System Monitor Project
 
 ## Overview
-This project automates system monitoring by collecting key metrics such as:
+This project automates system monitoring by collecting and archiving of system performance metrics.
+
+## features
 - CPU Usage  
 - Memory Usage  
 - Disk Usage  
 - System Uptime  
 - Load Average  
-
-## Script
-The script `collect_metrics.sh` runs every 15 minutes and saves reports to `reports/metrics_<timestamp>.txt`.
-
-## Archiving
-Every 24 hours, all reports are compressed into a tarball:
-`archive/metrics_<date>.tar.gz`
+- Collects CPU, Memory, Disk, Uptime, and Load Average.
+- Saves metrics every 15 minutes into the `reports/` directory.
+- Automatically compresses all daily reports into `archive/` at midnight.
 
 ## Cron Jobs
 To schedule the tasks:
-```bash
-*/15 * * * * /home/ec2-user/QA_assignment/system_monitor_project/scripts/collect_metrics.sh
+- **Every 15 mins:** Runs `collect_metrics.sh` to record metrics.
+- **Every 24 hours (midnight):** Archives all reports into `archive/metrics_<date>.tar.gz`.
 
-=======
-# system_monitor_project
->>>>>>> 5aade51334b5dfe894af340ca03167b562cdafae
+## Git
+- Only `scripts/`, `.gitignore`, and `README.md` are tracked in Git.
+- `reports/` and `archive/` are excluded via `.gitignore`.
