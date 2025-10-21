@@ -2,3 +2,7 @@
 
 reports/
 archive/
+
+# ignore system files
+*.log
+*.tar.gz

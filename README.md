@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 project - Batch 2
 
 # System Monitor Project
@@ -22,3 +23,6 @@ To schedule the tasks:
 ```bash
 */15 * * * * /home/ec2-user/QA_assignment/system_monitor_project/scripts/collect_metrics.sh
 
+=======
+# system_monitor_project
+>>>>>>> 5aade51334b5dfe894af340ca03167b562cdafae
